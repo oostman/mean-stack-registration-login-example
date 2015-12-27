@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app', ['ui.router', 'ngStorage'])
+        .module('app', ['ui.router', 'ngStorage', 'formly', 'formlyBootstrap'])
         .config(config)
         .run(run);
 

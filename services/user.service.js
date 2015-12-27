@@ -7,6 +7,7 @@ var _ = require('lodash');
 var jwt = require('jsonwebtoken');
 var bcrypt = require('bcryptjs');
 var Q = require('q');
+var extend = require('util')._extend;
 
 var service = {};
 
@@ -14,7 +15,6 @@ service.authenticate = authenticate;
 service.getById = getById;
 service.create = create;
 service.update = update;
-service.delete = _delete;
 
 module.exports = service;
 
@@ -117,12 +117,9 @@ function update(_id, userParam) {
     });
 
     function updateUser() {
-        // fields to update
-        var set = {
-            firstName: userParam.firstName,
-            lastName: userParam.lastName,
-            username: userParam.username,
-        };
+        // fields to update, copy all fields except for password
+        var set = extend({}, userParam);
+        delete set["password"];
 
         // update password if it was entered
         if (userParam.password) {
@@ -138,20 +135,6 @@ function update(_id, userParam) {
                 deferred.resolve();
             });
     }
-
-    return deferred.promise;
-}
-
-function _delete(_id) {
-    var deferred = Q.defer();
-
-    usersDb.remove(
-        { _id: _id },
-        function (err) {
-            if (err) deferred.reject(err);
-
-            deferred.resolve();
-        });
 
     return deferred.promise;
 }
