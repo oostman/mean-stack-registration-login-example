@@ -1,4 +1,9 @@
-# mean-stack-registration-login-example
-MEAN Stack User Registration and Login Example Application
+# MEAN Stack - Form Application with Login
 
-For details go to http://jasonwatmore.com/post/2015/12/09/MEAN-Stack-User-Registration-and-Login-Example.aspx
+I am striving to make a simple configurable form application.
+
+Goals of the exercise are:
+- Form configured by JSON file
+- Login using Facebook
+- Instructions on how to deploy it to AWS
+- Make it a bit prettier
