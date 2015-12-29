@@ -1,0 +1,47 @@
+[
+  {
+    "key": "username",
+    "type": "input",
+    "templateOptions": {
+      "type": "username",
+      "label": "Email address",
+      "placeholder": "Enter email"
+    }
+  },
+  {
+    "key": "firstName",
+    "type": "input",
+    "templateOptions": {
+      "type": "firstName",
+      "label": "First name",
+      "placeholder": "First name"
+    }
+  },
+  {
+    "key": "lastName",
+    "type": "input",
+    "templateOptions": {
+      "type": "lastName",
+      "label": "Last name",
+      "placeholder": "Last name"
+    }
+  },
+  {
+    "key": "address",
+    "type": "input",
+    "templateOptions": {
+      "type": "address",
+      "label": "Home Address",
+      "placeholder": "Home Address"
+    }
+  },
+  {
+    "key": "password",
+    "type": "input",
+    "templateOptions": {
+      "type": "password",
+      "label": "Password",
+      "placeholder": "Password"
+    }
+  }
+]
